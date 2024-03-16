@@ -1,10 +1,13 @@
 import winrm
 
-session = winrm.Session("192.168.1.2", auth=("winrm13910", "zaq1xsw2"))
+host = "192.168.1.2"
+username = "winrm13910"
+password = "zaq1xsw2"
+session = winrm.Session(host, auth=(username, password))
 
 result = session.run_cmd('ipconfig', ['/all'])
 
-print(result.std_out)
+
 
 
 
