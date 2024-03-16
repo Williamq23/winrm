@@ -6,9 +6,6 @@ result = session.run_cmd('ipconfig', ['/all'])
 
 print(result.std_out)
 
-print(result.std_err)
-
-
 
 
 
